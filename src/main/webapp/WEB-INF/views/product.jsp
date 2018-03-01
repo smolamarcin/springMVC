@@ -1,4 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8">
@@ -16,7 +18,6 @@
 </section>
 <section class="container">
     <div class="row">
-        <c:forEach items="${products}" var="product">
             <div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
                 <div class="thumbnail">
                     <div class="caption">
@@ -24,7 +25,11 @@
                         <p>${product.description}</p>
                         <p>Kategoria:${product.category}</p>
                         <p>Liczba sztuk w magazynie: ${product.unitsInStock}</p>
+                        <p>Opis: ${product.description}</p>
                         <p>
+                            <%--<a href="<spring:url value="/products"/>" class="btn btndefault">--%>
+                                <%--<span class="glyphicon-hand-left glyphicon"></span>Wstecz--%>
+                            <%--</a>--%>
                             <a href="#" class="btn btn-warning btn-large">
                             <span class="glyphicon-shopping-cart glyphicon">
                                 Zamow teraz
@@ -34,7 +39,6 @@
                     </div>
                 </div>
             </div>
-        </c:forEach>
     </div>
 </section>
 </body>

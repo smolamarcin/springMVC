@@ -47,11 +47,11 @@ public class ProductController {
         return "product";
     }
 
-    @RequestMapping("/productxd")
-    public String getProductsCategoryAndPrice(@RequestParam("category") String category,
-                                              @RequestParam("price") String price,
-                                              Model model) {
-        model.addAttribute("products", productService.getProductByCategoryAndPrice(category, price));
-        return "products";
-    }
+//    @RequestMapping("/productxd")
+//    public String getProductsCategoryAndPrice(@RequestParam("category") String category,
+//                                              @RequestParam("price") String price,
+//                                              Model model) {
+//        model.addAttribute("products", productService.getProductByCategoryAndPrice(category, price));
+//        return "products";
+//    }
 }
