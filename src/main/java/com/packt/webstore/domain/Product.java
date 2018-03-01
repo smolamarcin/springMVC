@@ -21,28 +21,6 @@ public class Product {
         this.unitPrice = unitPrice;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Product other = (Product) obj;
-        if (productId == null) {
-            if (other.productId != null) {
-                return false;
-            }
-        } else if (!productId.equals(other.productId)) {
-            return false;
-        }
-        return true;
-    }
-
 
     public String getName() {
         return name;
@@ -110,11 +88,26 @@ public class Product {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return unitsInStock == product.unitsInStock &&
+                unitsInOrder == product.unitsInOrder &&
+                discontinued == product.discontinued &&
+                Objects.equals(productId, product.productId) &&
+                Objects.equals(name, product.name) &&
+                Objects.equals(unitPrice, product.unitPrice) &&
+                Objects.equals(description, product.description) &&
+                Objects.equals(manufacturer, product.manufacturer) &&
+                Objects.equals(category, product.category) &&
+                Objects.equals(condition, product.condition);
+    }
+
+    @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((productId == null) ? 0 : productId.hashCode());
-        return result;
+
+        return Objects.hash(productId, name, unitPrice, description, manufacturer, category, unitsInStock, unitsInOrder, discontinued, condition);
     }
 
     @Override

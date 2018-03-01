@@ -24,6 +24,13 @@
                         <p>${product.description}</p>
                         <p>Kategoria:${product.category}</p>
                         <p>Liczba sztuk w magazynie: ${product.unitsInStock}</p>
+                        <p>
+                            <a href="#" class="btn btn-warning btn-large">
+                            <span class="glyphicon-shopping-cart glyphicon">
+                                Zamow teraz
+                            </span>
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
