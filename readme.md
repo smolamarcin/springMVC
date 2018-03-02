@@ -103,7 +103,7 @@ POST http://someadress.com/customers
  }
  
  Request:
- 201 (CREATED) </br>
+ >201 (CREATED) </br>
  Content-type: application/json
 
  
