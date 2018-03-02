@@ -102,7 +102,7 @@ Create new customer by posting the data:
    }</br>
  }</br>
  
- Request:
+ Request header:
  >201 (CREATED) </br>
  Content-type: application/json
 
