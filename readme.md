@@ -90,7 +90,7 @@ When client is accessing a resource with id 23 in an articles resource with this
  >Content-Type: text/html
 
 
-Examples of requests and responses:
+#### Examples of requests and responses:
 
 Create new customer by posting the data:
 >POST http://someadress.com/customers </br>
