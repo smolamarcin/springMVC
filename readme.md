@@ -42,7 +42,7 @@ After delivering, server closes connection ( making HTTP stateless protocol - do
 |PATCH | used to apply partial modifications to a resource. |
 
 
-
+### REST
 REST - is an architectural style for providing comuunicating standards.
 
 In the REST architectural style, the implementation of the client and the implementation of the server can be done independently without each knowing about the other.
