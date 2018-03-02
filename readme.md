@@ -82,25 +82,25 @@ For example:
 
 When client is accessing a resource with id 23 in an articles resource with this GET equest:
 
->GET /articles/23 HTTP/1.1
+>GET /articles/23 HTTP/1.1</br>
  Accept: text/html, application/xhtml
  
  The server response:
- >HTTP/1.1 200 (OK)
+ >HTTP/1.1 200 (OK)</br>
  >Content-Type: text/html
 
 
 Examples of requests and responses:
 
 Create new customer by posting the data:
-POST http://someadress.com/customers
- Body:
- {
-   “customer”: {
-     “name” = “Carla Bruni”
-     “email” = "carla@bruni.com"
-   }
- }
+>POST http://someadress.com/customers </br>
+ Body:</br>
+ {</br>
+   “customer”: {</br>
+     “name” = “Carla Bruni”</br>
+     “email” = "carla@bruni.com"</br>
+   }</br>
+ }</br>
  
  Request:
  >201 (CREATED) </br>
