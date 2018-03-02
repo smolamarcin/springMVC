@@ -43,4 +43,67 @@ After delivering, server closes connection ( making HTTP stateless protocol - do
 
 
 
-REST
+REST - is an architectural style for providing comuunicating standards.
+
+In the REST architectural style, the implementation of the client and the implementation of the server can be done independently without each knowing about the other.
+As long as each side knows what format of messages sent to the other side, they can be kept modular and separate.
+Separating the user interface from the data storage improves the flexability of the interface across platforms and improve scalability.
+
+By using REST interface, different clients hit the same REST endpoints, perform the same actions, and receive the same responses.
+
+Systems that followin the REST are stateless.
+Statelessness is enforced through the use of resources (nouns of the web - describes any object, document).
+
+In REST architecture, clients send requests to retrieve or modify resources, and servers send responses to these requests.
+
+### Requests
+REST requires that a client make a request to the server.
+Request consists:
+* HTTP method to specify kind of an operation
+* HEADER which allows the client to pass information about the request - it's called accept field
+* Path to the resource
+* Optional body message (contains data)
+
+#### Header
+In the Header client sends the type of content that it is able to receive from the server.
+Ensures that server does not send data that cannon be understood or processed by the client.
+
+For example - text file containing HTML would be secified with the type text/html
+
+#### Paths
+Requests must contain a path to the resource that the operation should be performed.
+
+
+### Responses
+When server is sending a data payload to the client, the server must include a content-type in the header of the response.
+Content-type header field alerts the client to the type of data it is sending in the response body.
+
+For example:
+
+When client is accessing a resource with id 23 in an articles resource with this GET equest:
+
+>GET /articles/23 HTTP/1.1
+ Accept: text/html, application/xhtml
+ 
+ The server response:
+ >HTTP/1.1 200 (OK)
+ >Content-Type: text/html
+
+
+Examples of requests and responses:
+
+Create new customer by posting the data:
+>POST http://someadress.com/customers
+ Body:
+ {
+   “customer”: {
+     “name” = “Carla Bruni”
+     “email” = "carla@bruni.com"
+   }
+ }
+ 
+ Request:
+ >201 (CREATED)
+  Content-type: application/json
+
+ 
