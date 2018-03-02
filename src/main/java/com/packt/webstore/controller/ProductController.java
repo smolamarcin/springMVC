@@ -1,14 +1,15 @@
 package com.packt.webstore.controller;
 
+import com.packt.webstore.domain.Product;
 import com.packt.webstore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.MatrixVariable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.List;
 import java.util.Map;
 
@@ -47,11 +48,11 @@ public class ProductController {
         return "product";
     }
 
-//    @RequestMapping("/productxd")
-//    public String getProductsCategoryAndPrice(@RequestParam("category") String category,
-//                                              @RequestParam("price") String price,
-//                                              Model model) {
-//        model.addAttribute("products", productService.getProductByCategoryAndPrice(category, price));
-//        return "products";
-//    }
+    @RequestMapping("/productxd")
+    public ResponseEntity<?> getProductsCategoryAndPrice(@RequestParam("category") String category,
+                                                               @RequestParam("price") String price) {
+        List<Product> products;
+        products = productService.getProductByCategoryAndPrice(category, price);
+        return ResponseEntity.ok().body(products);
+    }
 }
