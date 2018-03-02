@@ -104,6 +104,6 @@ Create new customer by posting the data:
  
  Request:
  >201 (CREATED)
-  Content-type: application/json
+ >Content-type: application/json
 
  
