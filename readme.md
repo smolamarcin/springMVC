@@ -93,7 +93,7 @@ When client is accessing a resource with id 23 in an articles resource with this
 Examples of requests and responses:
 
 Create new customer by posting the data:
->POST http://someadress.com/customers
+POST http://someadress.com/customers
  Body:
  {
    “customer”: {
@@ -103,7 +103,7 @@ Create new customer by posting the data:
  }
  
  Request:
- >201 (CREATED) </br>
- >Content-type: application/json
+ 201 (CREATED) </br>
+ Content-type: application/json
 
  
