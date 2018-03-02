@@ -103,7 +103,7 @@ Create new customer by posting the data:
  }
  
  Request:
- >201 (CREATED)
+ >201 (CREATED) </br>
  >Content-type: application/json
 
  
